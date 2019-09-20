@@ -28,12 +28,12 @@ class App extends Component {
       }
     ]
   }
+
   render() {
-    console.log(this.state.HomeBody)
     return (
       <div className="App">
         <h1>App</h1>
-        <HomeBody />
+        <HomeBody todos ={this.state.todos}/>
       </div>
     );
   }

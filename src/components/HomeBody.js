@@ -1,15 +1,15 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import TodoItem from './TodoItem';
 
 class HomeBody extends Component {
   render() {
-    return (
-      <div>
-        <h1>HomeBody</h1>
-      </div>
-    );
+    console.log(this.props.todos);
+    return this.props.todos.map((todo) => (
+      <TodoItem todo={todo} />
+      // <h3>{ todo.title}</h3>
+    ));
   }
+
 }
 
 export default HomeBody;
